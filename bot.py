@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from pymongo import MongoClient
 from time import sleep
 import requests
@@ -13,7 +12,6 @@ token = ''
 api_url = "https://api.telegram.org/bot{}/".format(token)
 
 def create_ids_list(ids_list):
-	'''создать первый список id'''
 	data = {
 	'_id': 1,
 	'ids_list': ids_list
@@ -22,7 +20,6 @@ def create_ids_list(ids_list):
 
 def update_ids_list(ids_list):
 	data_id = {'_id': 1}
-	#$addToSet добавить элемент если его там нет
 	data = {'$set':{'ids_list': ids_list}}
 	return channels_collection.update_one(data_id, data)
 
