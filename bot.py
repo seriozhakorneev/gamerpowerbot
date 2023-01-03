@@ -7,7 +7,7 @@ cluster = MongoClient("")
 db = cluster['']
 channels_collection = db['']
 # telegram
-chat_id = '@gamerpowerbot'
+chat_id = ''
 token = ''
 api_url = "https://api.telegram.org/bot{}/".format(token)
 
